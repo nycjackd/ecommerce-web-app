@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Login</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/item.css">
+	</head>
+    <body>
+        <%- include('navbar'); %>
+        <div class=result>
+
+            <img src="/assets/img/placeholder.png">
+            
+            
+            <div class="info">
+              <div class="title">
+                <div style="clear: both;"></div>
+          <div id="textbox">
+                  <h2 class="alignleft"> <%= item.name %> </h2>
+            <p class="alignright"> Number in stock: <%= item.inventory %></p>
+          
+                  <div style="clear: both;"></div>
+              </div>
+              
+              <h3> $<%= item.price %> </h3>
+          
+              <h4>Description:</h4>
+              <p> <%= item.description %> </p>
+            </div>
+
+            <div class="abutton">
+              <button id="toCart">Add to cart</button>
+            </div>
+            <div class="abutton">
+              <button id="purchase">Buy Now</button>
+            </div>
+
+          
+            
+           
+              
+            
+            
+          </div>
+
+          
+      <script>
+      
+      document.getElementById("toCart").addEventListener("click", function() {
+        post("/to_cart", {id: <%= item.id %>});
+      });
+
+      document.getElementById("purchase").addEventListener("click", function() {
+        post("/purchase", {id: <%= item.id %>});
+      });
+
+
+
+      /**
+       * sends a request to the specified url from a form. this will change the window location.
+       * @param {string} path the path to send the post request to
+       * @param {object} params the parameters to add to the url
+       * @param {string} [method=post] the method to use on the form
+       */
+
+      function post(path, params, method='post') {
+
+      // The rest of this code assumes you are not using a library.
+      // It can be made less verbose if you use one.
+      const form = document.createElement('form');
+      form.method = method;
+      form.action = path;
+
+      for (const key in params) {
+        if (params.hasOwnProperty(key)) {
+          const hiddenField = document.createElement('input');
+          hiddenField.type = 'hidden';
+          hiddenField.name = key;
+          hiddenField.value = params[key];
+
+          form.appendChild(hiddenField);
+        }
+      }
+
+      document.body.appendChild(form);
+      form.submit();
+      }
+
+
+      </script>
+    </body>

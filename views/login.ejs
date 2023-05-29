@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Login</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/login.css">
+	</head>
+    <body>
+        <%- include('navbar'); %>
+        <div class="login">
+            <h1>Sign in</h1>
+            <form action="/login/password" method="post">
+                <section>
+                    <label for="username">Username</label><br>
+                    <input id="username" name="username" type="text" autocomplete="username" required>
+                </section>
+                <section>
+                    <label for="password">Password</label><br>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required>
+                </section>
+                <button type="submit">Sign in</button>
+            </form>
+            <span>Don't have an have an account? <a href="/signup">Sign up</a></span>
+        </div>
+    </body>

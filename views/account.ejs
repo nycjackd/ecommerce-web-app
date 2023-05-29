@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Account</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/account.css">
+	</head>
+    <body>
+        <%- include('navbar'); %>
+
+        <div class="user-info">
+
+            <h2> Account: </h2>
+            <table>
+            <tr>
+                <td>Username</td>
+                <td> <%= user.username %>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><%= user.firstname %></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><%= user.lastname %></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>******</td>
+            </tr>
+            </table>
+            <a href="/logout"><button>Sign Out</button></a>    
+        </div>
+    </body>

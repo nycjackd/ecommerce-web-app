@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar {
+    font-size: 2em;
+    margin: 0px;
+    font-family: 'Russo One', sans-serif;
+    padding: 0;
+    
+}
+
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  overflow: hidden;
+  background-color: #003959;
+  background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #003959, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #003959, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.nav-bar li {
+    padding: 14px 14px 0px 14px;
+    margin: 0;
+  float: left;
+}
+
+.nav-bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+/*
+.nav-bar li a:hover {
+  background-color: #111;
+}
+*/
+
+
+
+.nav-bar input {
+  margin-top: 15px;
+  border-radius: 4px;
+  border-style: solid;
+  border: 0px;
+  padding: 10px;
+  transition: 0.3s;
+  width: 100px;
+  background-color: var(--background);
+  background-image: url('../assets/img/search.svg');
+  background-repeat: no-repeat;
+  background-position: 5px 7px;
+  
+}
+
+
+.nav-bar input:focus {
+  width: 350px;
+  background-image: none;
+  background-color: white;
+}
+
+
+#account {
+    color: white;
+    float: right;
+}
+
+/*
+.nav-bar ul {
+    padding: 0;
+    margin: 0;
+}
+*/
+
+.nav-bar .filter-white {
+    filter: brightness(0) saturate(100%)invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(102%);
+    margin: 15px 15px 0px 0px;
+    float: right;
+    
+
+}

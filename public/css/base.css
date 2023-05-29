@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+
+body {
+    font-family: 'Quicksand', arial, sans-serif;
+    padding: 0px;
+    border: 0px;
+    background-color: var(--background);
+
+}
+
+:root {
+    /*
+    --background: #ddd;
+    --main: #003959;
+    --accent: #8fd9d1;
+    */
+    --background: #ddd;
+    --main: #003959;
+    /*--main: #2B32B2;*/
+    --accent: #8fd9d1;
+    /*--accent: #1488CC;*/
+    /* etc. */
+  }

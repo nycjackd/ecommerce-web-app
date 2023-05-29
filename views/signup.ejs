@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sign up</title>
+		<link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+		<link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/signup.css">
+	</head>
+	<body>
+		<%- include('navbar'); %>
+
+		<div class="signup">
+			<h1>Sign up</h1>
+			<form action="/signup" method="post">
+				<section>
+					<label for="firstname">First Name</label><br>
+					<input id="firstname" name="firstname" type="text" autocomplete="firstname" required>
+				</section>
+				<section>
+					<label for="lastname">Last Name</label><br>
+					<input id="lastname" name="lastname" type="text" autocomplete="firstname" required>
+				</section>
+				<section>
+					<label for="username">Username</label><br>
+					<input id="username" name="username" type="text" autocomplete="username" required>
+				</section>
+				<section>
+					<label for="password">Password</label><br>
+					<input id="newpassword" name="password" type="password" autocomplete="new-password" required>
+				</section>
+				
+				<button type="submit">Sign up</button>
+
+			</form>
+			<span>Already have an have an account? <a href="/login">Log in</a></span>
+		</div>
+
+</body>

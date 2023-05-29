@@ -1,0 +1,77 @@
+body {
+  background: #CC95C0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.signup {
+    border-radius: 5px;
+    color: white;
+    background-color: var(--main);
+    width: 300px;
+
+    
+    top: 63px;
+    left: 0px;
+    
+    transform: translate(calc(50vw - 170px), max(30px, calc(50vh - 280px)));     position: absolute;
+
+    padding: 20px;
+    
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.2), 0 6px 10px rgba(0,0,0,0.40);
+  }
+  
+  .signup h1 {
+    margin-top: 0;
+  }
+
+  .signup input {
+    background-color: var(--background);
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0px;
+    transition: .3s;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 3px;
+  
+  }
+  
+  .signup input:focus {
+    padding: 15px;
+    margin: 5px 0;
+    background-color: white;
+  }
+  
+  
+  
+  .signup button {
+    border: none;
+    color: var(--main);
+    padding: 15px 32px;
+    width: 120px;
+    margin: 15px 0px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.25s;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--accent);
+    margin-bottom: 20px;
+  
+  }
+  
+  .signup button:hover {
+    background-color: #afe9e1;
+
+  }
+
+  .signup a {
+    color: #afe9e1;
+  }
+  
+  .signup span {
+    font-size: 14px;
+  }

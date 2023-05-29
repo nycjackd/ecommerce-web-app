@@ -1,0 +1,79 @@
+.results {
+  margin-bottom: 50px;
+}
+.result {
+
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    width: 600px;
+    background-color: #eee;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    position: relative;
+  
+    
+  }
+  
+  .result:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .result img {
+    display: inline-block;
+    height: 80%;
+    align-self: center;
+  }
+  
+  .result .info {
+    align-self: top;
+    display: flex;
+    margin-left: 5px;
+    flex-direction: column;
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .result .info h2 {
+    margin: 0;
+    margin-top: 5px;
+  }
+
+  .result .info h3 {
+    margin: 0px;
+  }
+  
+  .no-results {
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    
+    width: 300px;
+
+    top: 63px;
+    left: 0px;
+    
+    transform: translate(calc(50vw - 170px), max(30px, calc(50vh - 207px))); 
+    position: absolute;
+    padding: 20px;
+    
+  }
+  
+  
+  .result a span{ 
+    position: absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+  
+    z-index: 1;
+  
+    /* fixes overlap error in IE7/8, 
+       make sure you have an empty gif */
+    background-image: url('empty.gif');
+  }   

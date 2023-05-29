@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Search</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/cart.css">
+	</head>
+    <body>
+        <%- include('navbar'); %>
+
+        <div class="results">
+            <% for (let i=0; i < cart.length; i++) { %>
+                <div class=result>                      
+                    <img src="/assets/img/placeholder.png">
+                        
+                        
+                    <div class="info">
+                        <h2> <%= cart[i].name %> </h2>
+                      
+                        <p> <%= cart[i].description %></p>
+                        
+                        <h3>$<%= cart[i].price %></h3>
+                    </div>
+                    <div class="delete-item">
+                        <input type="image" id= "<%=i%>" class="filter-red" alt="Cart" src="/assets/img/delete.svg">
+                    </div>
+
+                </div>
+            <% } %>
+            <% if (cart.length == 0) { %>
+                <div class=no-results>
+                    <h3>No products found</h3>
+                </div>
+           <% } %>
+        </div>
+
+        <% if (cart.length > 0) { %>
+            <button id="purchase">Purchase cart</button>
+        <% } %>
+
+
+
+        <script>
+            var readId = "";
+            <% for (let j=0; j < cart.length ; j++) { %>
+                readId = <%= cart[j].id %>;
+                readNum = "" + <%= j %>;
+                document.getElementById(readNum).addEventListener("click", function() {
+                    post("/delete_cart", {id: readId});
+                });
+            <% } %>
+
+            document.getElementById("purchase").addEventListener("click", function() {
+              post("/purchase_cart", {purchase: true});
+            });
+      
+      
+            /**
+             * sends a request to the specified url from a form. this will change the window location.
+             * @param {string} path the path to send the post request to
+             * @param {object} params the parameters to add to the url
+             * @param {string} [method=post] the method to use on the form
+             */
+      
+            function post(path, params, method='post') {
+      
+            // The rest of this code assumes you are not using a library.
+            // It can be made less verbose if you use one.
+            const form = document.createElement('form');
+            form.method = method;
+            form.action = path;
+      
+            for (const key in params) {
+              if (params.hasOwnProperty(key)) {
+                const hiddenField = document.createElement('input');
+                hiddenField.type = 'hidden';
+                hiddenField.name = key;
+                hiddenField.value = params[key];
+      
+                form.appendChild(hiddenField);
+              }
+            }
+      
+            document.body.appendChild(form);
+            form.submit();
+            }
+      
+      
+            </script>
+  
+    </body>

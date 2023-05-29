@@ -1,0 +1,143 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+ :root {
+    --background: #ddd;
+    --main: #003959;
+
+    --accent: #8fd9d1;
+  }
+
+body {
+    font-family: 'Quicksand', arial, sans-serif;
+    padding: 0px;
+    border: 0px;
+    /*background-color: var(--main);*/
+    /*
+    background: #1488CC;  /* fallback for old browsers *//*
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 *//*
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #003959, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #003959, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.filter-white {
+  filter: brightness(0) saturate(100%)invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(102%);
+  margin: 15px 15px 0px 0px;
+  float: right;
+
+}
+
+h1 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  margin: 30px;
+}
+
+h2 {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+.search input[type="text"]{
+  border:0px solid #e5e5e5;
+  font-size:20px;
+  background-color: var(--background);
+  width:400px;
+  display:block;
+  padding:10px 20px;
+  border-radius: 30px;
+  font-family: 'Quicksand', ;
+  color:#333;
+  outline:0;
+  box-shadow:0px 1px 0px #fff;
+  margin: auto;
+  transition: .5s;
+}
+.search input[type="text"]:focus{
+  background-color: white;
+}
+
+.options button {
+  background-color: var(--accent);
+  border: none;
+  color: var(--main);
+  width: 100px;
+  padding: 15px 0px;
+  margin: 0px 10px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+   cursor: pointer;
+
+}
+
+.options {
+  width: 250px;
+  margin: 0;
+  float: right;
+  
+}
+
+.options button:hover {
+  background-color: #afe9e1;
+}
+
+body {
+  background-color: #a8c3cc
+  }
+  
+  .outer {
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  
+    
+    width: min(80%, 600px);
+    padding: 15px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+  #one {
+    background-color: #CCA8C3;
+    
+  }
+  
+  #two {
+    background-color: #C3CCA8;
+  }
+  
+  .inner {
+  
+    height: 100px;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 10px;
+  }
+  
+  .inner:hover {
+  
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  
+  img {
+    height: 100%;
+  }

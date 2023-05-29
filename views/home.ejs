@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>NOW</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+        <link rel="stylesheet" href="/css/home.css">
+	</head>
+    <body>
+        <% if (loggedIn) { %>
+            <a href=/account><img class="filter-white" src="/assets/img/account.svg" alt="Account"/></a>
+            <a href=/cart><img class="filter-white" src="/assets/img/cart.svg" alt="Cart"/></a>
+        <% } else { %>
+            <div class="options">
+                <a href="/login"><button>Log In</button></a>
+                <a href="/signup"><button>Sign Up</button></a>
+            </div>
+            <% } %>
+        <br>
+        <h1>NOW</h1>
+        <div class="search">
+            <form action="/search" method="POST" >
+                <input type="text" id="search" name="search" >
+            </form>
+        </div>
+        
+        <h2>Shop Faster</h2>
+
+        <div class="outer" id="one">
+            <div class="inner">
+              <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            
+          </div>
+
+        <div class="outer" id="two">
+            <div class="inner">
+              <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            <div class="inner">
+                <img src="/assets/img/placeholder.png">
+            </div>
+            
+          </div>
+    </body>
+
