@@ -287,19 +287,9 @@ router.post('/to_cart', function(req, res, next) {
 });
 
 router.post('/search', function(req, res, next) {
-    console.log('req.body.search: ' + req.body.search);
     res.locals.searchTerm = req.body.search;
     next();
   }, search, function(req, res, next) {
-    db.all('SELECT * FROM products WHERE (name LIKE ?)', [ 
-      res.locals.searchTerm
-    ], function(err, rows) {
-      if (err) { return next(err); }
-      console.log(res.locals.searchResults);
-      next();
-    });
-    console.log('Search term: ' + res.locals.searchTerm)
-    console.log('Results: ' + res.locals.searchResults)
     res.render('search', { results: res.locals.searchResults });
   });
 
