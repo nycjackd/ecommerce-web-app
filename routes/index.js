@@ -130,8 +130,8 @@ function validCart(req, res, next) {
 function purchaseCart(req, res, next) {
 
     for (var i = 0; i < res.locals.betterCart.length; i++) {
-      console.log('res.locals.betterCart[i].count: ' + res.locals.betterCart[i].count);
-      console.log('res.locals.betterCart[i].id: ' + res.locals.betterCart[i].id);
+      //console.log('res.locals.betterCart[i].count: ' + res.locals.betterCart[i].count);
+      //console.log('res.locals.betterCart[i].id: ' + res.locals.betterCart[i].id);
       db.all('SELECT * FROM inventory WHERE product_id = ? LIMIT ?', [
         res.locals.betterCart[i].id,
         res.locals.betterCart[i].count
@@ -167,14 +167,14 @@ function purchaseCart(req, res, next) {
       db.run('DELETE FROM inventory WHERE id = ?', [
         rows[j].id
           ], function(err) {
-              console.log('Made it to 3');
+              //console.log('Made it to 3');
               //console.log('rows[j].id: ' + rows[j].id);
               /*
               console.log('cartRow.id: ' + cartRow.id)
               console.log('Deleting id: ' + inventoryRow.id + ' from inventory');
               */
               if (err) { return next(err); }
-              console.log('req.user: ' + req.user)
+              //console.log('req.user: ' + req.user)
 
                    
         });

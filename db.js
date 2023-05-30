@@ -41,8 +41,9 @@ db.serialize(function() {
     user_id INTEGER, \
     product_id \
   )");
+  
+/*
 
-  /*
   db.run("INSERT OR IGNORE INTO products (name, price, description) VALUES (?, ?, ?)", [
     'Product 1',
     10,
@@ -74,7 +75,7 @@ db.serialize(function() {
   ]);
 
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 3; i++) {
     for (var j = 1; j < 6; j++) {
     db.run("INSERT INTO inventory (product_id) VALUES (?)", [
         j
